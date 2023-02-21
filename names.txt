@@ -1,2 +1,3 @@
-git 
+Lingabathula Thapaswi 
+Learning the git and github from kunal kushwaha
 
