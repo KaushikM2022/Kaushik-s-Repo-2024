@@ -1,0 +1,122 @@
+linux commands:
+_____________
+
+cd desktop
+ls                    //list all the things in desktop folder
+mkdir project        // creating the folder
+ls                    // now you will find the project folder 
+cd project          //entering inside the folder
+ls                   //now the folder is empty
+git init              //initialize the empty git repository in my project folder
+ls                   //now also the folder is empty as the initialized empty git repository folder is hidden but it's there 
+ls -a               // -a will show all the hidden files in this case it will show the .git folder
+ls .git              // to know what are all the things that are there in the .git folder
+git status          // now will mentain the history of the project any change we will made in this project the git will hit up
+touch names.txt  // will create the file with the name as names
+git status         // how do we see what all the files have been changed,modified, added, deleted in short how do we know what are all the changes that we made in the project                    that are not currently saved in the history of the project by using this command
+git add .         // now we want to know the changes should reflect in the project history
+                  by using this command . means everything in the current project directory that is untracked puts all the files in the stagging area or we can write the                                individual names of the files instead of .
+git status        // it's now showing in the history of the project 
+git commit -m "names.txt file added"          // inorder to give the message that that changes were added in the project history we have to use this command basically -m will                                                   provide the messages of the file in the history of the project
+git status       // now it will question are there any files that are not been in stagging area in this case it's no means all the files are been in the history
+vi names.txt    // vi or vim filename will add something to this file let's say I have written Lingabathula Thapaswi
+	       Learning the Git and Github from Kunal Kushwaha // to exit from the command mode in git bash press 'esc :wq' will write the changes to the file will save and                  quit the editor.//'esc :q!' will not save the changes or it will discard the changes made in the file and quit the editor.
+                 by double clicking on the file you will see this changes been present.
+            
+cat names.txt // to see the changes that been made in the file we need to use this command it will display what are all the things are there in the file will show in the  gitbash                 terminal
+git status     // it will show the untracked / not staged the changes that been modified as we have modified in the names.txt with the information inside it.
+git add .     //now it's been staged the project history
+git status     // changes been committed
+git restore --staged names.txt             // staged to unstaged in the project history
+git status     // changes not staged for commit
+git add names.txt // again we staged in the project history
+git status     // changes been commited shows green
+git commit -m "names.txt file modified" // gives the messaged names.txt files modified 1 file change, 3 insertions(+)
+git log       // currently all the commits that were saved names.text file added and names.text files modified
+             //'q' to exit form the git log
+rm -rf names.txt // this command is used to delete this file
+git add .
+git status
+git commit -m "names.txt file deleted" 
+git log // the deleted/modified file that is committed will show up in the top to delete that commit we need to copy the below hash so that all the above commits will be deleted for that we need to use the command 'git reset copyandpastebelowhashcode or first few characters of belowcommithash'
+git reset  306302e3d0e4d3f82d14e9410ca0754a78a95e72 // so that deleted commit will be deleted from the project history or whatever the commit that I have been copied all the commits above it will be deleted from the project history means unstage the changes after reset.
+git log // previous hashcommits were deleted
+git status// it will show up like unstaged 
+git add . //it will staged
+git status // changes to be committed to project history
+touch surname.txt//for eg. I have changed by creating a file
+git add .
+git status
+vi surname.txt // enter the message Lingabathula Thapaswi 'esc:wq' to exit from vim
+cat surname.txt// show the message in gitbash i.e: Lingabathula Thapaswi
+
+touch houses.txt//for eg. I have changed by creating another file
+git add .
+git status//committed in project history
+
+
+
+git stash //I dont want to use this changes now means goto the backstage if we want to try out with the clean code base means to put all mywork somewhere else without making a commit/history in the project whenever I want that thing back whenever I want all this things been changed I will bring you back
+git status // it will show up like this On branch master nothing to commit, working tree clean
+git log // now my project folder is exactly like it was means the changes not been staged/committed in the project history means names.txt deleted, houses.txt added modified, surname.txt added was not been in the project history
+ 
+git stash pop// all that are in the back stage come back to the staging area/committing means show it in the project history means names.txt deleted, houses.txt added modified, surname.txt added was been in the project history
+
+git add . 
+git status
+git stash //I don't want it in the project history it comes back to the original
+git stash clear // those changes that we have made to unstaged or not commits in the seperate structure were gone/removed again if we use git stash pop it wont present in the project history means we can't get those back
+git status // it will show nothing to commit,working tree clean
+
+LET'S LEARN THE GITHUB 
+2 WAYS /2THINGS WE GONNA DO
+1. hosting our own project on github means personal,local projects we want to push it on github/ share it with other people how do we do that?
+Ans:
+open the github.com open your profile/dashboard with githublog
+create a new repository
+give the repository name -- wish to give anyname eg. learning_git
+set it to public
+click on creat repository
+basically in the search you will find the url for this repository https://github.com/LingabathulaThapaswi/learning_git
+we want this url to be attached to our local project i.e project folder on desktop
+goto git bash enter the command after entering into the project folder 
+'git remote add origin url'// git is the gitcommand , remote is nothing but we are working with the urls , add basically means adding a new url, origin basically means what is the name of the url going tobe that your are going to add
+//in this case git remote add origin https://github.com/LingabathulaThapaswi/learning_git.git
+
+// by convention origin can be anything, by convention all the repositories and folders that basically in our personal/own account they have a name called origin
+
+'git remote -v' //-v this will basically show me all the url's that are attached to the project folder // now this https://github.com/LingabathulaThapaswi/learning_git.git url is attached (push,fetch) to the project folder now // if we refresh the url in github can we see names.txt file here --NO we cant because I haven't shared the changes to this url
+
+'git push origin master'//to share this changes to the url we use this command git is gitcommand, push means push the changes, to which url we want to push that is origin, to which branch we want to push that is master . now refresh the url in the github we see the changes names.txt was there in the url 5 commits is also here click on that you will see the on feb21,2023 you have made 5 commits with the message for the commits
+
+
+what do we mean by branches?
+when you click on commits you can see the master 
+currently master is the main branch because of the inclusive naming convention
+whenever we get started most probably we say main
+my client is little old that's why it's showing master in the git bash previously it was master now it's updated to main
+
+what are branches?
+Imagine we are making commits let's create some files on gitbash 
+touch hotel.txt 
+git add .
+git status
+git commit -m "hotel.txt added'
+
+touch rollno.txt 
+git add .
+git status
+git commit -m "roll number.txt added'
+
+vi rollno.txt // making the changes to this file by adding 18567T0950 ':wq' quit
+git status
+git add .
+git status
+git commit -m "roll number.txt modified"
+git log // to check the commits made
+
+
+fetch, push, branch-->master,head
+
+
+
