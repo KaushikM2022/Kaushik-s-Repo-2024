@@ -98,25 +98,88 @@ my client is little old that's why it's showing master in the git bash previousl
 
 what are branches?
 Imagine we are making commits let's create some files on gitbash 
-touch hotel.txt 
+touch hotel.txt //creating the file
 git add .
 git status
 git commit -m "hotel.txt added'
 
-touch rollno.txt 
+touch rollno.txt //creating the file
 git add .
 git status
 git commit -m "roll number.txt added'
 
-vi rollno.txt // making the changes to this file by adding 18567T0950 ':wq' quit
+vi rollno.txt // making the changes to this file by adding 18567T0950 'esc:wq' quit
 git status
 git add .
 git status
 git commit -m "roll number.txt modified"
-git log // to check the commits made
+git log // to check the commits made below commit is the lastest commit in the remote branch (origin/master) , 4 commits have been made 'q' quit // it looks like directed asyclic graph by default the name of the branch is main previous it was master
 
+what is the use of the branch? why are we having the branches?
+The use of branch in short is whenever we are working on other feature or new feature, resolving a bug it's better to always create a seperate branch.
+In branches what happens is that we should never commit on the main or master branch
+because in open source projects
+let's open the github and search for some project eg. react-native
+we can see the main branch this is the code that is actually used by the people/users and developers
+Imagine there are so many other branches but the main branch is the default branch this is the one that is been used by the people
+that is the reason we never commit directly on this main branch because our code that is not finalized yet might be contain some errors
+that is why all the code that is not finalized yet that we are working on should go in a seperate branch so that the users are not get affected 
+for that we can create a new branch 
+goto gitbash type this command for creating the new branch
+'git branch feature' // we can see a new branch is been created is called as feature now  a command was executed called git checkout feature the head pointing is shifting from main to feature branch*
+'git commit'
+'git commit'
 
+ls .git // in gitbash type this command to know what are there in the hidden folder .git
+        //HEAD - It is a pointer that says all the new commits that we will be made will be added on the head, currently the head is on the feature branch, Hence all the commits that we will be making will be added on the feature branch. only the feature branch is moving forward and the main branch is as it is.
+
+another point to remember we are not the only one contributing to this code base
 fetch, push, branch-->master,head
 
+
+let's say that while you are working on a project on your own seperate feature branch for our own issues
+
+someone else gets there code and added in the main branch that also happens current my head is on the main branch now means whenever i make a new commit that will be added to the main branch 
+
+'git checkout main'
+'git commit' // now the main branch and your project branch is going side by side
+              this is the use of branches
+
+
+let's say our features that we are adding in our feature branch in our code sample that are not currently the part of the main branch means users cannot see it .
+now let's say it's finalized so you will tell to the people who maintains this project my project branch code is finalized can you merge this code into the main branch/code so that the users can also use it
+
+'git merge feature' // the people will maintain your project will merge your code by using this command
+                     // now our feature branch is the part of the main branch
+                     
+'git checkout main' // people can actually see the code now that was on the commits to the feature branch
+
+How this merging happens?
+it happens via the pull requests
+
+How do we create new branches?
+Why do we work with new branches?
+Why can't everyone work with the main branch?
+how do we get the new branch merged?
+what is the pull request?
+
+
+if we look at our code sample right now in the gitbash 
+git log // the below commit is on (origin/master) branch
+
+git remote -v // I can open it  like this in github by select the url right click-->open it will open                it up in the browser
+ 
+'git push origin master' //git is the gitcommand, push means to push the url, url is the origin, branch is master . if I want to push the new commits on the (origin/master) branch it will reflect the changes when you refresh the github url that you are currently working on.
+'git log' // now the head is pointing to master branch
+ the url that is added that is also in the origin/master branch means there are not commits above the master branch there are extra which are not already on the url
+
+most of the qns that we need to answer right now they will be much more clearer when we are working on the open source projects/ existing project on github.
+
+in github commclassroom/commclassroomOP
+lets say that commclassroom is the organization, the project of the organization known as commclassroomOP
+
+what do we need to do inorder to make changes/contributions to this project 
+this is the project on the account of the commclassroom should anyone who doesnot have access to it like random person in the world should they be allowed to make the changes to the commclassroomOP project directly how dangerous that would be
+so if we try it right now we wouldnot be able to make those changes to anyfile in this folder
 
 
