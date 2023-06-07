@@ -1,6 +1,6 @@
 Lingabathula Thapaswi 
 Learning the git and github from kunal kushwaha
-Keep in mind while making chnges to our text file using the vim, press i to get insert mode 
+Keep in mind while making changes to our text file using the vim, press i to get insert mode 
 and then press esc + :x to exit,Basic Vim commands we migth get stuck
 
 
