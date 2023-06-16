@@ -179,7 +179,20 @@ in github commclassroom/commclassroomOP
 lets say that commclassroom is the organization, the project of the organization known as commclassroomOP
 
 what do we need to do inorder to make changes/contributions to this project 
-this is the project on the account of the commclassroom should anyone who doesnot have access to it like random person in the world should they be allowed to make the changes to the commclassroomOP project directly how dangerous that would be
-so if we try it right now we wouldnot be able to make those changes to anyfile in this folder
+this is the project on the account of the commclassroom should anyone who doesnot have access to it like random person in the world should they be allowed to make the changes to the commclassroomOP project directly how dangerous would that be
+so if we try it right now we willnot be able to make those changes to anyfile in this folder
+
+how do we resolve this? what is the way to contribute to this code sample because we don't the permission for this.
+- create a copy of this project in our own account by forking from the organization 
+
+-instead of commclassroom/commclassroomOP it's now LingabathulaThapaswi/commclassroomOP project
+-now the project is in our own account so we can do anything we want to do with it.
+-copy this clone from codebutton under there will be the forked url copy it to clone it
+- any folder that starts with your own account, the name of that is going to be origin.
+- so whenever I clone this in my Desktop by using the command 
+'git clone UrlOfTheForkedProject'
+
+
+
 
 
