@@ -20,10 +20,10 @@ git status        // it's now showing in the history of the project
 git commit -m "names.txt file added"          // inorder to give the message that that changes were added in the project history we have to use this command basically -m will                                                   provide the messages of the file in the history of the project
 git status       // now it will question are there any files that are not been in stagging area in this case it's no means all the files are been in the history
 vi names.txt    // vi or vim filename will add something to this file let's say I have written Lingabathula Thapaswi
-	       Learning the Git and Github from Kunal Kushwaha // to exit from the command mode in git bash press 'esc :wq' will write the changes to the file will save and                  quit the editor.//'esc :q!' will not save the changes or it will discard the changes made in the file and quit the editor.
+	       Learning the Git and Github from Kunal Kushwaha // to exit from the command mode in git bash press 'esc :wq' will write the changes to the file will save and                  quit the editor. or 'esc + :x'//'esc :q!' will not save the changes or it will discard the changes made in the file and quit the editor.
                  by double clicking on the file you will see this changes been present.
             
-cat names.txt // to see the changes that been made in the file we need to use this command it will display what are all the things are there in the file will show in the  gitbash                 terminal
+cat names.txt // to see the changes that been made in the file we need to use this command it will display what are all the things are there in the file will show in the     terminal
 git status     // it will show the untracked / not staged the changes that been modified as we have modified in the names.txt with the information inside it.
 git add .     //now it's been staged the project history
 git status     // changes been committed
@@ -56,7 +56,7 @@ git status//committed in project history
 
 
 
-git stash //I dont want to use this changes now means goto the backstage if we want to try out with the clean code base means to put all mywork somewhere else without making a commit/history in the project whenever I want that thing back whenever I want all this things been changed I will bring you back
+git stash //(I don't want to commit it and loose this changes)I dont want to use this changes now means goto the backstage if we want to try out with the clean code base means to put all mywork somewhere else without making a commit/history in the project whenever I want that thing back whenever I want all this things been changed I will bring you back
 git status // it will show up like this On branch master nothing to commit, working tree clean
 git log // now my project folder is exactly like it was means the changes not been staged/committed in the project history means names.txt deleted, houses.txt added modified, surname.txt added was not been in the project history
  
@@ -64,7 +64,7 @@ git stash pop// all that are in the back stage come back to the staging area/com
 
 git add . 
 git status
-git stash //I don't want it in the project history it comes back to the original
+git stash //I don't want it in the project history it comes back to the original11
 git stash clear // those changes that we have made to unstaged or not commits in the seperate structure were gone/removed again if we use git stash pop it wont present in the project history means we can't get those back
 git status // it will show nothing to commit,working tree clean
 
@@ -171,7 +171,7 @@ git remote -v // I can open it  like this in github by select the url right clic
  
 'git push origin master' //git is the gitcommand, push means to push the url, url is the origin, branch is master . if I want to push the new commits on the (origin/master) branch it will reflect the changes when you refresh the github url that you are currently working on.
 'git log' // now the head is pointing to master branch
- the url that is added that is also in the origin/master branch means there are not commits above the master branch there are extra which are not already on the url
+ the url that is added that is also in the origin/master branch means there are not commits above the master branch that are extra which are not already on the url
 
 most of the qns that we need to answer right now they will be much more clearer when we are working on the open source projects/ existing project on github.
 
@@ -179,7 +179,33 @@ in github commclassroom/commclassroomOP
 lets say that commclassroom is the organization, the project of the organization known as commclassroomOP
 
 what do we need to do inorder to make changes/contributions to this project 
-this is the project on the account of the commclassroom should anyone who doesnot have access to it like random person in the world should they be allowed to make the changes to the commclassroomOP project directly how dangerous that would be
-so if we try it right now we wouldnot be able to make those changes to anyfile in this folder
+this is the project on the account of the commclassroom should anyone who doesnot have access to it like random person in the world should they be allowed to make the changes to the commclassroomOP project directly how dangerous  would that be
+so if we try it right now we willnot be able to make those changes to anyfile in this folder
+ 
+currently it has only the readme file but if you try to change it we will not be able to do that 
+why because we don't have the access to this account/organization this is the problem that we face
+
+how do we resolve this? what is the way to contribute to this code sample because we don't the permission for this.
+- create a copy of this project in our own account by forking from the organization 
+
+-instead of commclassroom/commclassroomOP or  WeMakeDevs/github-tutorial it's now LingabathulaThapaswi/commclassroomOP or LingabathulaThapaswi
+/github-clone-tutorialproject
+-now the project is in our own account so we can do anything we want to do with it.
+it will not affect the main project until and unless the people who have approval for this project can merge/ approve the changes via a pull request.
+-copy this clone from codebutton under there will be the forked url copy it to clone it
+- any folder that starts with your own account, the name of that is going to be origin.
+- so whenever I clone this in my Desktop by using the command 
+'git clone UrlOfTheForkedProject'
+or
+'git clone https://github.com/LingabathulaThapaswi/github-clone-tutorial.git' //origin url is our own account
+
+-'git remote add upstream UrlOfTheMainOrganizationProject' //from where we forked the project url is called the upstream url by convention
+or 
+'git remote add upstream https://github.com/WeMakeDevs/github-tutorial.git' //upstream url is orgranization project account 
+
+
+
+
+
 
 
