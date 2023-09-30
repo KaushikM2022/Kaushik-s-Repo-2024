@@ -179,29 +179,28 @@ in github commclassroom/commclassroomOP
 lets say that commclassroom is the organization, the project of the organization known as commclassroomOP
 
 what do we need to do inorder to make changes/contributions to this project 
-<<<<<<< HEAD:linuxcommandsforgit.txt
 this is the project on the account of the commclassroom should anyone who doesnot have access to it like random person in the world should they be allowed to make the changes to the commclassroomOP project directly how dangerous  would that be
 so if we try it right now we willnot be able to make those changes to anyfile in this folder
  
 currently it has only the readme file but if you try to change it we will not be able to do that 
 why because we don't have the access to this account/organization this is the problem that we face
-=======
+
 this is the project on the account of the commclassroom should anyone who doesnot have access to it like random person in the world should they be allowed to make the changes to the commclassroomOP project directly how dangerous would that be
 so if we try it right now we willnot be able to make those changes to anyfile in this folder
->>>>>>> 6a0bfde65cce0b3c88421effdc09c719973bef0f:linux commands for git.txt
+
 
 how do we resolve this? what is the way to contribute to this code sample because we don't the permission for this.
 - create a copy of this project in our own account by forking from the organization 
 
-<<<<<<< HEAD:linuxcommandsforgit.txt
+
 -instead of commclassroom/commclassroomOP or  WeMakeDevs/github-tutorial it's now LingabathulaThapaswi/commclassroomOP or LingabathulaThapaswi
 /github-clone-tutorialproject
 -now the project is in our own account so we can do anything we want to do with it.
 it will not affect the main project until and unless the people who have approval for this project can merge/ approve the changes via a pull request.
-=======
+
 -instead of commclassroom/commclassroomOP it's now LingabathulaThapaswi/commclassroomOP project
 -now the project is in our own account so we can do anything we want to do with it.
->>>>>>> 6a0bfde65cce0b3c88421effdc09c719973bef0f:linux commands for git.txt
+
 -copy this clone from codebutton under there will be the forked url copy it to clone it
 - any folder that starts with your own account, the name of that is going to be origin.
 - so whenever I clone this in my Desktop by using the command 
@@ -212,6 +211,8 @@ or
 -'git remote add upstream UrlOfTheMainOrganizationProject' //from where we forked the project url is called the upstream url by convention
 or 
 'git remote add upstream https://github.com/WeMakeDevs/github-tutorial.git' //upstream url is orgranization project account 
+
+****
 
 
 
